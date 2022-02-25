@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/devices.min.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/ab3b567b8f.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Warehouse Laptop</title>
+</head>
+    <body>
+        <div class="marvel-device macbook">
+            <div class="top-bar"></div>
+            <div class="camera"></div>
+            <div class="screen">
+                <img class="bg" src="img/bg2.jpg">
+                <div class="status-bar">
+                    <div class="status-bar-icons">
+                        <i class="fas fa-wifi"></i>
+                        <i class="fas fa-battery-three-quarters"></i>
+                        <p id="date">03/06/2020 13:56</p>
+                    </div>
+                    <div class="status-buttons">
+                        <button id="close" class="fas fa-power-off" onclick="closeButton()"></button>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="window-border">
+                        <button class="closeWindow" onclick="closeWindow()"></button>
+                        <button class="minWindow" onclick="minWindow()"></button>
+                        <button class="maxWindow"></button>
+                    </div>
+                    <div class="inside-content">
+                        <div class="login-tab">
+                            <i class="fas fa-mountain"></i>
+                            <h2>The Closed Road</h2>
+                            <div class="login-form">
+                                <div class="welcome-text">
+                                    <h3>Welcome Back!</h3>
+                                </div>
+                                <div class="input-container">
+                                    <label class="input-label-username">Username:<input type="text" class="username-input" maxlength="22" name="textArea" spellcheck="false" autocomplete="off"></label>
+                                    <br><br>
+                                    <label class="input-label-password">Password:<input type="password" class="password-input" maxlength="25" name="textArea" spellcheck="false" autocomplete="off"></label>
+                                </div>
+                                <button class="login-button" onclick="loginButton()">Log In</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loading-page">
+                        <h2>Loading</h2>
+                        <div id="preloader">
+                            <div id="loader"></div>
+                        </div>
+                    </div>
+                    <div class="main-page">
+                        <div class="main-top-bar">
+                            <i class="fas fa-mountain"></i><h2>The Closed Road</h2>
+                            <h3>User: </h3><h3 id="inside-username">anonymous</p>
+                        </div>
+                        <div class="left-tab">
+                            <a class="wh-bg"></a>
+                            <p class="wh-text">Small Warehouse</p>
+                            <button class="dashboard-button" onclick="dashboardButton()">Dashboard</button>
+                            <button class="buy-button" onclick="buyButton()">Buy</button>
+                            <button class="sell-button" onclick="sellButton()">Sell</button>
+                        </div>
+                        <!-- Dashboard Page Start -->
+                        <div class="dashboard-page">
+                            <div class="db-top-bar">
+                                <span>Status: </span><span id="status-span">Active</span>
+                            </div>
+                            <div class="levels">
+                                <div><span>Capacity: </span><button id="capacity" disabled></button></div>
+                                <div><span>Profit: </span><button id="profit" disabled></button></div>
+                            </div>
+                            <div class="info-block">
+                                <div class="column">
+                                    <h3>Total Earnings</h3><span id="total-earnings">$250,000</span>
+                                </div>
+                                <div id="column-2" class="column">
+                                    <h3>Total Sales</h3><span id="total-sales" >5</span>
+                                </div>
+                            </div>
+                            <div class="info-block-2">
+                                <h3>UTK Inc.</h3>
+                                <p>Selling useless shit proudly since 2005. Unsafe, slow and illegal...</p>
+                            </div>
+                        </div>
+                        <!-- Buy Page Start -->
+                        <div class="buy-page">
+                            <div class="goods-box">
+                                <a class="goods-image" style="background-image: url(img/arts1.png);"></a>
+                                <h3 class="goods-header">Art & Paintings</h3>
+                                <button class="goods-button" onclick="buyGood(1)">Buy</button>
+                                <button id="g-1" class="goods-eco">$26.000</button>
+                            </div>
+                            <div class="goods-box">
+                                <a class="goods-image" style="background-image: url(img/bio.png);"></a>
+                                <h3 class="goods-header">Biohazard Supply</h3>
+                                <button class="goods-button" onclick="buyGood(2)">Buy</button>
+                                <button id="g-2" class="goods-eco">$32.000</button>
+                            </div>
+                            <div class="goods-box">
+                                <a class="goods-image" style="background-image: url(img/elec.png);"></a>
+                                <h3 class="goods-header">Electronics</h3>
+                                <button class="goods-button" onclick="buyGood(3)">Buy</button>
+                                <button id="g-3" class="goods-eco">$17.000</button>
+                            </div>
+                            <div class="goods-box">
+                                <a class="goods-image" style="background-image: url(img/fur.png);"></a>
+                                <h3 class="goods-header">Coats & Furs</h3>
+                                <button class="goods-button" onclick="buyGood(4)">Buy</button>
+                                <button id="g-4" class="goods-eco">$21.000</button>
+                            </div>
+                            <div class="goods-box">
+                                <a class="goods-image" style="background-image: url(img/gems.png);"></a>
+                                <h3 class="goods-header">Gems</h3>
+                                <button class="goods-button" onclick="buyGood(5)">Buy</button>
+                                <button id="g-5" class="goods-eco">$35.000</button>
+                            </div>
+                            <div class="goods-box">
+                                <a class="goods-image" style="background-image: url(img/narc.png);"></a>
+                                <h3 class="goods-header">Narcotics</h3>
+                                <button class="goods-button" onclick="buyGood(6)">Buy</button>
+                                <button id="g-6" class="goods-eco">$29.000</button>
+                            </div>
+                            <div class="goods-box">
+                                <a class="goods-image" style="background-image: url(img/tob.png);"></a>
+                                <h3 class="goods-header">Tobacco & Alcohol</h3>
+                                <button class="goods-button" onclick="buyGood(7)">Buy</button>
+                                <button id="g-7" class="goods-eco">$27.500</button>
+                            </div>
+                            <div class="goods-box">
+                                <a class="goods-image" style="background-image: url(img/ivory.png);"></a>
+                                <h3 class="goods-header">Ivory</h3>
+                                <button class="goods-button" onclick="buyGood(8)">Buy</button>
+                                <button id="g-8" class="goods-eco">$24.000</button>
+                            </div>
+                            <div class="goods-box">
+                                <a class="goods-image" style="background-image: url(img/drug.png);"></a>
+                                <h3 class="goods-header">Drugs</h3>
+                                <button class="goods-button" onclick="buyGood(9)">Buy</button>
+                                <button id="g-9" class="goods-eco">$30.000</button>
+                            </div>
+                            <div class="goods-box">
+                                <a class="goods-image" style="background-image: url(img/exp.png);"></a>
+                                <h3 class="goods-header">Explosives</h3>
+                                <button class="goods-button" onclick="buyGood(10)">Buy</button>
+                                <button id="g-10" class="goods-eco">$36.000</button>
+                            </div>
+                        </div>
+                        <div class="sell-page">
+                            <div class="total-worth">
+                                <h3>Total Worth</h3>
+                                <h3 id="total-worth-value">$500.000</h3>
+                            </div>
+                            <div class="total-bonus">
+                                <h3>Bonus</h3>
+                                <h3 id="total-bonus-value">$50.000</h3>
+                            </div>
+                            <div class="info-list">
+                                <h3>Maximum Slot Capacity: </h3><h3 id="max-slot-h3">12</h3><br><br>
+                                <h3>Used Slots: </h3><h3 id="used-slot-h3">6</h3><br><br>
+                                <h3>Empty Slots: </h3><h3 id="empty-slot-h3">6</h3>
+                            </div>
+                            <div class="items-list">
+
+                            </div>
+                            <button class="sell-btn" onclick="sellGoods()">SELL</button>
+                        </div>
+                    </div>
+                    <div class="window-popup-smoke">
+                        <div class="window-popup-btn">
+                            <h3>Are you sure?</h3>
+                            <button onclick="cancelButton()">Cancel</button>
+                            <button onclick="confirmButton()">Confirm</button>
+                        </div>
+                        <div class="window-popup-info">
+                            <h3 id="window-popup-header">You don't have enough space to store this product!</h3>
+                            <button onclick="cancelButton()">Close</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-smoke">
+                    <div class="popup">
+                        <h3 id="popup-header">Warning!</h3>
+                        <p id="popup-content"></p>
+                        <button onclick="popupClose()">Close</button>
+                    </div>
+                </div>
+                <div class="footer-apps">
+                    <div class="app-wrapper">
+                        <button class="fas fa-globe-europe" onclick="openWindow()"></button>
+                        <button class="fas fa-inbox"></button>
+                        <button class="fas fa-database"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-bar"></div>
+        </div>
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>

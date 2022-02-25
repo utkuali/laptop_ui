@@ -1,0 +1,986 @@
+body {
+    font-family: Helvetica;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.marvel-device {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+
+.bg {
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    -webkit-user-drag: none;
+}
+
+.status-bar {
+    user-select: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20px;
+    width: 100%;
+    background-color: silver;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+    border-top: none;
+    z-index: 2;
+}
+
+.status-bar-icons {
+    top: 1.5px;
+    float: right;
+    display: inline;
+    position: relative;
+}
+
+.status-bar-icons p {
+    padding: 0px 5px;
+    display: inline;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.status-bar i {
+    padding: 0px 2px;
+}
+
+.status-buttons {
+    display: inline;
+    width: 50px;
+    left: 4px;
+    position: relative;
+}
+
+.status-buttons .fa-power-off {
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 2px;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 13px;
+    background-color: #bebebe;
+}
+
+.fa-power-off:hover {
+    color: red;
+}
+
+.window {
+    display: inline;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border: solid 0.1px black;
+    border-radius: 4px;
+    background-color: #e9e9e9;
+    height: 500px;
+    width: 900px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+.window-border {
+    display: inline;
+    position: absolute;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 15px;
+    background-color: rgb(211, 211, 211);
+    z-index: 1;
+}
+
+.closeWindow, .minWindow, .maxWindow {
+    position: absolute;
+    border: none;
+    outline: none;
+    text-align: center;
+    top: 2px;
+    padding: 5.5px;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: #bebebe;
+}
+
+.window .closeWindow {
+    left: 4px; 
+}
+
+.window .minWindow {
+    left: 24px;
+}
+
+.window .maxWindow {
+    left: 44px;
+}
+
+.closeWindow:hover {
+    background-color: red;
+}
+
+.minWindow:hover {
+    background-color: rgb(228, 228, 2);
+}
+
+.maxWindow:hover {
+    background-color: lime;
+}
+
+.loading-page {
+    position: absolute;
+    background-color: rgb(122, 199, 122);
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    height: 80%;
+    width: 80%;
+    top: 50px;
+    left: 90px;
+    text-align: center;
+}
+
+.loading-page h2 {
+    position: relative;
+    top: 20px;
+    font-size: 45px;
+}
+
+.inside-content {
+    position: absolute;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    height: 80%;
+    width: 80%;
+    top: 50px;
+    left: 90px;
+}
+
+.inside-content h2 {
+    user-select: none;
+    position: absolute;
+    font-size: 55px;
+    font-weight: 200;
+    width: fit-content;
+    top: 0px;
+    left: 210px;
+    color: green;
+}
+
+.fa-mountain {
+    position: absolute;
+    top: 15px;
+    left: 135px;
+    font-size: 60px;
+    color: green;
+}
+
+.login-form {
+    border: solid 2px green;
+    position: absolute;
+    top: 120px;
+    left: 80px;
+    width: 80%;
+    height: 60%;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 10px;
+    right: 220px;
+    color: green;
+    height: auto;
+}
+
+.welcome-text h3 {
+    font-weight: 100;
+}
+
+.input-container {
+    position: absolute;
+    top: 70px;
+    left: 150px;
+    width: 300px;
+}
+
+.input-label-username {
+    top: 0;
+    left: 5px;
+}
+
+.input-label-password {
+    top: 35px;
+    left: 5px;
+}
+
+.username-input {
+    cursor: default;
+    outline: none;
+    position: relative;
+    border: none;
+    background-color: green;
+    color: white;
+}
+
+.username-input:hover {
+    background-color: rgb(0, 75, 0);
+}
+
+.password-input {
+    cursor: default;
+    outline: none;
+    position: relative;
+    border: none;
+    left: 3.5px;
+    background-color: green;
+    color: white;
+}
+
+.password-input:hover {
+    background-color: rgb(0, 75, 0);
+}
+
+.login-button {
+    position: absolute;
+    top: 150px;
+    left: 252px;
+    font-size: 15px;
+    height: 25px;
+    width: 150px;
+    color: white;
+    background-color: green;
+    border: none;
+    outline: none;
+}
+
+.login-button:hover {
+    background-color: rgb(0, 75, 0);
+}
+
+.main-page {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    background-color: white;
+}
+
+.main-top-bar {
+    position: absolute;
+    top: 15px;
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(177,177,177,1) 100%);
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+.main-top-bar .fa-mountain {
+    position: relative;
+    left: 10px;
+    display: inline;
+    font-size: 35px;
+}
+
+.main-top-bar h2 {
+    position: relative;
+    left: 10px;
+    top: 15px;
+    display: inline;
+    color: green;
+}
+
+.main-top-bar h3 {
+    position: relative;
+    left: 450px;
+    top: 15px;
+    display: inline;
+    color: green;
+}
+
+.left-tab {
+    background-color: grey;
+    height: 100%;
+    width: 100%;
+}
+
+#inside-username {
+    color: black;
+}
+
+.wh-bg {
+    position: absolute;
+    top: 104px;
+    left: 30px;
+    height: 112.7px;
+    width: 200px;
+    border: solid 0.5px green;
+    border-radius: 1px;
+    background-image: url(img/w-small.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.wh-text {
+    background-color: rgba(0, 128, 0, 0.5);
+    color: white;
+    position: absolute;
+    left: 30px;
+    top: 183px;
+    width: 201px;
+    text-indent: 10px;
+}
+
+.dashboard-button {
+    background-color: green;
+    position: absolute;
+    top: 235px;
+    left: 30px;
+    height: 25px;
+    width: 201px;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.dashboard-button:hover {
+    background-color: rgb(0, 75, 0);
+}
+
+.buy-button {
+    background-color: green;
+    position: absolute;
+    top: 270px;
+    left: 30px;
+    height: 25px;
+    width: 201px;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.buy-button:hover {
+    background-color: rgb(0, 75, 0);
+}
+
+.sell-button {
+    background-color: green;
+    position: absolute;
+    top: 305px;
+    left: 30px;
+    height: 25px;
+    width: 201px;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.sell-button:hover {
+    background-color: rgb(0, 75, 0);
+}
+
+.button-active {
+    background-color: rgb(1, 53, 1);
+}
+
+.dashboard-page {
+    position: absolute;
+    top: 104px;
+    left: 250px;
+    height: 350px;
+    width: 600px;
+    border: solid 1px green;
+}
+
+.db-top-bar {
+    position: relative;
+    top: 0;
+    height: 30px;
+    width: 100%;
+    background: linear-gradient(to top, rgb(207, 207, 207), #e9e9e9);
+}
+
+.db-top-bar span {
+    position: relative;
+    height: 5px;
+    top: 5px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: green;
+}
+
+#status-span {
+    color: black;
+}
+
+.levels {
+    position: relative;
+    border: solid .05px green;
+    border-left: none;
+    border-right: none;
+    height: 50px;
+    background: linear-gradient(to bottom, rgb(204, 204, 204), #e9e9e9);
+}
+
+.levels span {
+    display: inline;
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.levels button {
+    display: inline;
+    position: relative;
+    width: 500px;
+    height: 8px;
+    border-radius: 15px;
+    border: solid 1px black;
+    top: 2px;
+    left: 10px;
+}
+
+#capacity {
+    background: linear-gradient(to right, green 0%, green 50%, #e9e9e9 50%, #e9e9e9 100%);
+}
+
+#profit {
+    background: linear-gradient(to right, green 0%, green 15%, #e9e9e9 15%, #e9e9e9 100%);
+    left: 35px;
+}
+
+.info-block {
+    position: relative;
+    height: 85px;
+    width: 600px;
+    padding: 0px;
+    margin: 0px;
+    border-bottom: solid 1px green;
+    background: linear-gradient(to bottom, #e9e9e9, rgb(200, 200, 200));
+}
+
+.column {
+    position: absolute;
+    height: 100%;
+    width: 300px;
+    left: 25px;
+    top: 0px;
+}
+
+#column-2 {
+    border-left: solid 1px green;
+    left: 300px;
+}
+
+.column h3 {
+    position: relative;
+    left: 50px;
+    top: -10px;
+    color: green;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.column span {
+    position: relative;
+    left: 90px;
+    top: -30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#column-2 h3 {
+    left: 80px;
+}
+
+#column-2 span {
+    left: 135px;
+}
+
+.info-block-2 {
+    position: relative;
+    top: 30px;
+    left: 20px;
+    width: 560px;
+}
+
+.info-block-2 h3 {
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+    color: green;
+}
+
+.info-block-2 p {
+    word-break: normal;
+}
+
+/* Buy Page */
+
+.buy-page {
+    position: absolute;
+    top: 104px;
+    left: 250px;
+    height: 350px;
+    width: 600px;
+    border: solid 1px green;
+    text-align: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.buy-page::-webkit-scrollbar {
+	width: 9px;
+}
+
+.buy-page::-webkit-scrollbar-thumb {
+	background: rgba(0, 128, 0, 0.5);
+}
+
+.buy-page::-webkit-scrollbar-thumb:hover {
+	background: green;
+}
+
+.goods-box {
+    position: relative;
+    display: inline-block;
+    margin: 30px; 
+    width: 200px;
+    height: 150px;
+    left: 0;
+}
+
+.goods-header {
+    position: absolute;
+    top: -19px;
+    background-color: rgba(0, 128, 0, 0.5);
+    color: white;
+    width: 100%;
+    font-weight: 400;
+}
+
+.goods-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 151px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.goods-button {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 30px;
+    width: 100px;
+    border: hidden;
+    background: rgba(0, 128, 0, 0.5);
+    color: white;
+    outline: none;
+    border-right: solid .05px black;
+}
+
+.goods-button:hover {
+    background: rgb(0, 200, 0);
+}
+
+.goods-eco {
+    position: absolute;
+    bottom: 0px;
+    left: 100px;
+    height: 30px;
+    width: 100px;
+    border: hidden;
+    background: rgba(0, 128, 0, 0.5);
+    color: white;
+    outline: none;
+}
+
+/* SELL PAGE */
+
+.sell-page {
+    position: absolute;
+    top: 104px;
+    left: 250px;
+    height: 350px;
+    width: 602px;
+    border: solid 1px green;
+}
+
+.sell-page h3 {
+    display: inline;
+    position: relative;
+    left: 100px;
+    top: 5px;
+    color: green;
+}
+
+#total-worth-value {
+    top: 25px;
+    left: 15px;
+    font-size: 15px;
+    color: black;
+}
+
+#total-bonus-value {
+    top: 25px;
+    left: 62px;
+    font-size: 15px;
+    color: black;
+}
+
+.total-worth {
+    display: inline-block;
+    position: absolute;
+    height: auto;
+    width: 301px;
+    height: 60px;
+    background: linear-gradient(to bottom, #e9e9e9, rgb(200, 200, 200));
+}
+
+.total-bonus {
+    display: inline-block;
+    position: absolute;
+    border-left: solid .05px green;
+    height: auto;
+    right: 0px;
+    width: 301px;
+    height: 60px;
+    background: linear-gradient(to bottom, #e9e9e9, rgb(200, 200, 200));
+}
+
+.total-bonus h3 {
+    left: 125px;
+}
+
+.info-list {
+    position: absolute;
+    width: 602px;
+    height: 120px;
+    top: 60px;
+    border-top: solid .05px green;
+    background: linear-gradient(to bottom, #e9e9e9, rgb(200, 200, 200));
+}
+
+.info-list h3 {
+    top: 10px;
+    left: 10px;
+}
+
+#max-slot-h3, #used-slot-h3, #empty-slot-h3 {
+    color: black;
+}
+
+.items-list {
+    position: absolute;
+    width: 602px;
+    height: 145px;
+    top: 180px;
+    border-top: solid .05px green;
+    background: linear-gradient(to bottom, #e9e9e9, rgb(200, 200, 200));
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.items-list::-webkit-scrollbar {
+	width: 9px;
+}
+
+.items-list::-webkit-scrollbar-thumb {
+	background: rgba(0, 128, 0, 0.5);
+}
+
+.items-list::-webkit-scrollbar-thumb:hover {
+	background: green;
+}
+
+.items-list h3 {
+    left: 10px;
+}
+
+#i-1, #i-2, #i-3, #i-4, #i-5, #i-6, #i-7, #i-8, #i-9, #i-10, #i-11, #i-12 {
+    color: black;
+}
+
+.sell-btn {
+    position: absolute;
+    width: 602px;
+    height: 30px;
+    bottom: 0px;
+    outline: none;
+    border: none;
+    border-top: solid .05px green;
+    background: linear-gradient(to bottom, green, rgb(1, 214, 1));
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.sell-btn:hover {
+    background: linear-gradient(to bottom, rgb(0, 65, 0), rgb(0, 151, 0));
+}
+
+/* WINDOW POPUP */
+
+.window-popup-smoke {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.window-popup-btn {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    top: 200px;
+    left: 300px;
+    z-index: 1;
+    background-color: white;
+    text-align: center;
+}
+
+.window-popup-btn button {
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+.window-popup-btn button:hover {
+    background-color: rgb(0, 61, 0);
+}
+
+.window-popup-info {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    top: 200px;
+    left: 300px;
+    z-index: 1;
+    background-color: white;
+    text-align: center;
+}
+
+.window-popup-info h3 {
+    font-size: 15px;
+}
+
+.window-popup-info button {
+    position: absolute;
+    background-color: green;
+    color: white;
+    width: 75px;
+    height: 30px;
+    border: none;
+    outline: none;
+    bottom: 5px;
+    left: 115px;
+}
+
+.window-popup-info button:hover {
+    background-color: rgb(0, 61, 0);
+}
+
+/* POPUP */
+
+.popup-smoke {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.popup {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: solid .05px black;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    top: 150px;
+    left: 270px;
+    z-index: 1;
+    background-color: #e9e9e9;
+    text-align: center;
+}
+
+.popup h3 {
+    position: relative;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+
+.popup p {
+    position: relative;
+    top: 50px;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+}
+
+.popup button {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    border: solid .05px black;
+    border-radius: 5px;
+    user-select: none;
+    outline: none;
+    font-size: 25px;
+}
+
+.popup button:hover {
+    background-color: #ececec;
+}
+
+/* FOOTER APPS */
+
+.footer-apps {
+    position: absolute;
+    bottom: 5px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.app-wrapper {
+    position: relative;
+    width: auto;
+    display: inline;
+    border-radius: 10px;
+    bottom: 0;
+    background: linear-gradient(to bottom, #ffffff, rgb(104, 104, 104));
+}
+
+.footer-apps button {
+    position: relative;
+    margin: 0px 3px;
+    bottom: 5px;
+}
+
+.fa-globe-europe {
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 0;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: green;
+    color: black;
+    position: absolute;
+    font-size: 50px;
+}
+
+.fa-database {
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(180, 180, 13);
+    position: absolute;
+    font-size: 45px;
+}
+
+.fa-inbox {
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    position: absolute;
+    font-size: 45px;
+}
+
+/* LOADER */
+
+#preloader {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    height: 100%;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: green;
+    -webkit-animation: spin 2s linear infinite;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: green;
+    -webkit-animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: green;
+    -webkit-animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
